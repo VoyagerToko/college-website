@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artificial Intelligence and Machine Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+      
+        body.page-loaded {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\pccoe-logo.png" width="125px" alt="img of logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="course-detail">
+            <div class="left">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\ai.jpg" alt="AI Image">
+            </div>
+            <div class="right">
+                <h1>Artificial Intelligence and Machine Learning</h1>
+                <p><strong>Course Description:</strong> This course covers the fundamentals of Artificial Intelligence (AI)...</p>
+                <p><strong>Instructor:</strong> Dr. Aarav Patel, PhD in Computer Science</p>
+                <p><strong>Duration:</strong> 6 months (3 semesters)</p>
+                <p><strong>Rating:</strong> 4.5 stars (based on 500+ reviews)</p>
+                <p><strong>Average Package:</strong> 6 LPA (Lakhs Per Annum)</p>
+                <p><strong>Prerequisites:</strong> Basic programming knowledge...</p>
+                <p><strong>Course Outline:</strong></p>
+                <ul>
+                    <li>Introduction to Artificial Intelligence</li>
+                    <li>Understanding Machine Learning Algorithms</li>
+                    <li>Deep Learning with Neural Networks</li>
+                    <li>Natural Language Processing (NLP)</li>
+                    <li>AI in Robotics and Autonomous Systems</li>
+                    <li>Real-world Applications of AI and ML</li>
+                </ul>
+                <p><strong>Certification:</strong> Upon successful completion, students will receive a certification...</p>
+            </div>
+        </div>
+        
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="fcol-1">
+                    <h4>Download our app at</h4>
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\google-play-store-icon-2.png" alt="Google Play Store">
+                </div>
+                <div class="fcol-1">
+                    <h2>Terms and Policies</h2>
+                    <h4>Terms of use<br>Privacy Policy<br>Security<br>Other Policies</h4>
+                </div>
+                <div class="fcol-1">
+                    <h2>Follow us on</h2>
+                    <h4>Instagram</h4>
+                    <h4>Facebook</h4>
+                    <h4>Twitter</h4>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 PCCOE Mehul Rawat | All Rights Reserved.</p>
+     </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("page-loaded");
+    });
+  
+    document.addEventListener("click", function (e) {
+      const link = e.target.closest("a");
+      if (link && link.href && !link.target) {
+        e.preventDefault();
+        document.body.classList.remove("page-loaded");
+        setTimeout(() => {
+          window.location = link.href;
+        }, 500); 
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+      
+        body.page-loaded {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+</head>
+<body>
+<div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../images/pccoe-logo.png" width="125px" alt="PCCOE Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="../images/book.png" alt="Book Icon" width="30px" height="30px">
+            </div>
+        </div>
+    
+
+    <center><h1>Welcome to (Sign In / Sign Up)</h1></center>
+
+    <div class="account" id="login">
+        <div class="acol-1">
+            <center><h2>Login</h2></center>
+            <form id="myform" method="POST">
+                <center><img src="../images/Default-Profile-Picture-Transparent.png" width="100px"></center>
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" placeholder="Enter your userID..." required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Enter the password..." required>
+
+                <button type="submit">Login</button>
+                <p>Not registered yet?</p>
+                <button type="button" id="SignUpButton">Sign-up</button>
+            </form>
+        </div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="account" id="register" style="display: none;">
+        <div class="acol-1">
+            <center><h2>Sign-up</h2></center>
+            <form id="myform2" method="POST">
+                <label for="signup-name">Name</label>
+                <input type="text" id="signup-name" name="name" placeholder="Enter your name..." required>
+
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" name="username" placeholder="Choose a userID..." required>
+
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="password" placeholder="Create a password..." required>
+
+                <button type="submit">Sign-up</button>
+                <p>Already have an account?</p>
+                <button type="button" id="SignInButton">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="fcol-1">
+                    <h4>Download our app at</h4>
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\google-play-store-icon-2.png">
+                </div>
+                <div class="fcol-1">
+                    <h2>Terms and Policies</h4>
+                    <h4>Terms of use<br>Privacy Policie<br>Security<br>Other Policies</h6>
+                </div>
+                <div class="fcol-1">
+                    <h2>Follow us on</h2>
+                    <h4>Instagram</h4>
+                    <h4>Facebook</h4>
+                    <h4>Twitter</h4>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 PCCOE Mehul Rawat | All Rights Reserved.</p>
+     </div>
+        </div>
+     </div>
+    
+    <script src="../js/login.js"></script>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("page-loaded");
+    });
+  
+    document.addEventListener("click", function (e) {
+      const link = e.target.closest("a");
+      if (link && link.href && !link.target) {
+        e.preventDefault();
+        document.body.classList.remove("page-loaded");
+        setTimeout(() => {
+          window.location = link.href;
+        }, 500); 
+      }
+    });
+  </script>
+</html>

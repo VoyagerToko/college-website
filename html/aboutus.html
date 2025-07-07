@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+      
+        body.page-loaded {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\pccoe-logo.png" width="125px" alt="img of logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\book.png" alt="image of book" width="30px" height="30px">
+            </div>
+        </div>
+
+        <div class="about">
+            <h1>About the College</h1>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="box">
+                        <h2>Introduction</h2>
+                        <p><strong>PCCOE</strong>, established in 1999, is a premier engineering college in Maharashtra affiliated with SPPU under PCET.</p>
+                    </div>
+                    <div class="box">
+                        <h2>Vision</h2>
+                        <p>To serve the Society, Industry and all stakeholders through value-added quality education.</p>
+                    </div>
+                    <div class="box">
+                        <h2>Mission</h2>
+                        <ul>
+                            <li>Provide quality education in Engineering and Management.</li>
+                            <li>Foster research and innovation culture.</li>
+                            <li>Develop competent professionals.</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2>Academic Departments</h2>
+                        <ul>
+                            <li>Computer Engg, IT, AI & DS, E&TC, Mechanical, Civil, MBA</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2>Key Highlights</h2>
+                        <ul>
+                            <li>NBA & NAAC Accredited</li>
+                            <li>400+ placement companies</li>
+                            <li>Top recruiters: TCS, Infosys, etc.</li>
+                            <li>Clubs: CSI, IEEE, ACM, MESA, CESA</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2>Research & Innovation</h2>
+                        <p>Funded labs, patents filed, paper publications & active research culture.</p>
+                    </div>
+                    <div class="box">
+                        <h2>Training and Placements</h2>
+                        <p>Dedicated cell for soft skills, aptitude, bootcamps; 80%+ placements, up to 10+ LPA packages.</p>
+                    </div>
+                    <div class="box">
+                        <h2>Contact Us</h2>
+                        <p>
+                            Sector No. 26, Pradhikaran, Nigdi, Pune – 411044<br>
+                            Email: pccoepune@gmail.com<br>
+                            Phone: +91-20-27653168 / 27653066
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+ 
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="fcol-1">
+                    <h4>Download our app at</h4>
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\google-play-store-icon-2.png">
+                </div>
+                <div class="fcol-1">
+                    <h2>Terms and Policies</h2>
+                    <h4>Terms of use<br>Privacy Policie<br>Security<br>Other Policies</h4>
+                </div>
+                <div class="fcol-1">
+                    <h2>Follow us on</h2>
+                    <h4>Instagram</h4>
+                    <h4>Facebook</h4>
+                    <h4>Twitter</h4>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 PCCOE Mehul Rawat | All Rights Reserved.</p>
+     </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("page-loaded");
+    });
+  
+    document.addEventListener("click", function (e) {
+      const link = e.target.closest("a");
+      if (link && link.href && !link.target) {
+        e.preventDefault();
+        document.body.classList.remove("page-loaded");
+        setTimeout(() => {
+          window.location = link.href;
+        }, 500); 
+      }
+    });
+  </script>
+</html>

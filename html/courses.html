@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+      
+        body.page-loaded {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\pccoe-logo.png" width="125px" alt="img of logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="C:\Users\mehul\OneDrive\Desktop\website\images\book.png" alt="image of book" width="30px" height="30px">
+        </div>
+
+
+   <h2 class="title">All Courses</h2>
+        <center><div class="sort-options">
+            <label for="sort">Sort by:</label>
+            <select id="sort" onchange="sortCourses()">
+                <option value="default">Default</option>
+                <option value="rating">Rating</option>
+                <option value="package">Average Package</option>
+            </select>
+        </div></center>
+        <br>
+        <br>
+   <div class="small_container" id="courses-container">
+            <div class="col-4" data-course-id="AI" data-rating="4" data-package="6">
+                <a href="ai.html">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\ai.jpg">
+                </a>
+                <h4>Artificial Intelligence and Machine Learning </h4>
+                <p>course review</p>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <p>6lpa avg package</p>
+                <button class="bookmark-btn">🔖 Bookmark</button>
+            </div>
+            <div class="col-4" data-course-id="CS" data-rating="3" data-package="8">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\cs.jpg">
+                <h4>Computer Science </h4>
+                <p>course review</p>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <p>8lpa avg package</p>
+                <button class="bookmark-btn">🔖 Bookmark</button>
+            </div>
+            <div class="col-4" data-course-id="AE" data-rating="3" data-package="5">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\ae.jpg">
+                <h4>Aerospace Engineering </h4>
+                <p>course review</p>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <p>5lpa avg package</p>
+                <button class="bookmark-btn">🔖 Bookmark</button>
+            </div>
+            <div class="col-4" data-course-id="PP" data-rating="4" data-package="7">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\pp.jpg">
+                <h4>Particle Physics </h4>
+                <p>course review</p>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <p>7lpa avg package</p>
+                <button class="bookmark-btn">🔖 Bookmark</button>
+            </div>
+            <div class="col-4" data-course-id="ME" data-rating="2" data-package="7">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\me.jpg">
+                <h4>Mechanical Engineering</h4>
+                <p>course review</p>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <p>7lpa avg package</p>
+                <button class="bookmark-btn">🔖 Bookmark</button>
+            </div>
+            <div class="col-4" data-course-id="CE" data-rating="3" data-package="7">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\ce.jpg">
+                <h4>Chemical Engineering</h4>
+                <p>course review</p>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\star.png">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\blank star.jpg">
+                <p>7lpa avg package</p>
+                <button class="bookmark-btn">🔖 Bookmark</button>
+            </div>
+     </div>
+
+
+     <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="fcol-1">
+                    <h4>Download our app at</h4>
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\google-play-store-icon-2.png">
+                </div>
+                <div class="fcol-1">
+                    <h2>Terms and Policies</h4>
+                    <h4>Terms of use<br>Privacy Policie<br>Security<br>Other Policies</h6>
+                </div>
+                <div class="fcol-1">
+                    <h2>Follow us on</h2>
+                    <h4>Instagram</h4>
+                    <h4>Facebook</h4>
+                    <h4>Twitter</h4>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 PCCOE Mehul Rawat | All Rights Reserved.</p>
+     </div>
+        </div>
+     </div>
+
+     
+    <script src="../js/login.js"></script>
+
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("page-loaded");
+    });
+  
+    document.addEventListener("click", function (e) {
+      const link = e.target.closest("a");
+      if (link && link.href && !link.target) {
+        e.preventDefault();
+        document.body.classList.remove("page-loaded");
+        setTimeout(() => {
+          window.location = link.href;
+        }, 500); 
+      }
+    });
+  </script>
+</html>

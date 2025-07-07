@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - PCCOE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+      
+        body.page-loaded {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\pccoe-logo.png" width="125px" alt="img of logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="C:\Users\mehul\OneDrive\Desktop\website\images\book.png" alt="image of book" width="30px" height="30px">
+            </div>
+        </div>
+
+        <div class="about">
+            <h1>Contact Us</h1>
+            <p><strong>We'd love to hear from you!</strong> Whether you're a prospective student, alumni, recruiter, or just curious about PCCOE, here’s how you can get in touch:</p>
+
+            <h2>Our Location</h2>
+            <p>
+                <strong>Pimpri Chinchwad College of Engineering (PCCOE)</strong><br>
+                Sector No. 26, Pradhikaran, Nigdi, Pune – 411044<br>
+                Maharashtra, India
+            </p>
+
+            <h2>Contact Details</h2>
+            <p>
+                <strong>Phone:</strong> +91-20-27653168 / 27653066<br>
+                <strong>Email:</strong> pccoepune@gmail.com
+            </p>
+
+            <h2>Office Hours</h2>
+            <p>Monday to Saturday: 9:00 AM - 5:00 PM<br>
+               Sunday: Closed</p>
+
+            <h2>Social Media</h2>
+            <p>Stay connected with us:</p>
+            <ul>
+                <li><i class="fa-brands fa-square-instagram"></i> Instagram: @pccoe_official</li>
+                <li><i class="fa-brands fa-facebook"></i> Facebook: /pccoeofficial</li>
+                <li><i class="fa-brands fa-square-x-twitter"></i> Twitter: @pccoe_pune</li>
+            </ul>
+
+            <h2>Send Us a Message</h2>
+<form action="mailto:pccoepune@gmail.com" method="post" enctype="text/plain" class="contact-form">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="subject">Subject:</label><br>
+    <input type="text" id="subject" name="subject"><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+</form>
+            <h2>Get Directions</h2>
+            <p><a href="https://www.google.com/maps/place/PCCOE" target="_blank">Click here to view on Google Maps</a></p>
+        </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="fcol-1">
+                    <h4>Download our app at</h4>
+                    <img src="C:\Users\mehul\OneDrive\Desktop\website\images\google-play-store-icon-2.png">
+                </div>
+                <div class="fcol-1">
+                    <h2>Terms and Policies</h2>
+                    <h4>Terms of use<br>Privacy Policy<br>Security<br>Other Policies</h4>
+                </div>
+                <div class="fcol-1">
+                    <h2>Follow us on</h2>
+                    <h4>Instagram</h4>
+                    <h4>Facebook</h4>
+                    <h4>Twitter</h4>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 PCCOE Mehul Rawat | All Rights Reserved.</p>
+     </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("page-loaded");
+    });
+  
+    document.addEventListener("click", function (e) {
+      const link = e.target.closest("a");
+      if (link && link.href && !link.target) {
+        e.preventDefault();
+        document.body.classList.remove("page-loaded");
+        setTimeout(() => {
+          window.location = link.href;
+        }, 500); 
+      }
+    });
+  </script>
+</html>
